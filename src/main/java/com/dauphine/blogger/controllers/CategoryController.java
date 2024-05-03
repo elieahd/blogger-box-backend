@@ -4,6 +4,7 @@ import com.dauphine.blogger.dto.CategoryRequest;
 import com.dauphine.blogger.models.Category;
 import com.dauphine.blogger.models.Post;
 import com.dauphine.blogger.services.CategoryService;
+import com.dauphine.blogger.services.PostService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -28,9 +28,12 @@ import java.util.UUID;
 public class CategoryController {
 
     private final CategoryService categoryService;
+    private final PostService postService;
 
-    public CategoryController(CategoryService categoryService) {
+    public CategoryController(CategoryService categoryService,
+                              PostService postService) {
         this.categoryService = categoryService;
+        this.postService = postService;
     }
 
     @GetMapping
@@ -90,7 +93,8 @@ public class CategoryController {
             description = "Retrieve posts by category id"
     )
     public List<Post> getPostsByCategoryId(@PathVariable UUID id) {
-        return new ArrayList<>();
+        List<Post> posts = postService.getAllByCategoryId(id);
+        return posts;
     }
 
 }
