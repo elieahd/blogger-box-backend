@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -39,10 +40,12 @@ public class CategoryController {
     @GetMapping
     @Operation(
             summary = "Get all categories",
-            description = "Retrieve all categories"
+            description = "Retrieve all categories or filter like name"
     )
-    public List<Category> getAll() {
-        List<Category> categories = categoryService.getAll();
+    public List<Category> getAll(@RequestParam String name) {
+        List<Category> categories = name == null || name.isBlank()
+                ? categoryService.getAll()
+                : categoryService.getAllLikeName(name);
         return categories;
     }
 

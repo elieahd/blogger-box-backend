@@ -23,6 +23,11 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
+    public List<Category> getAllLikeName(String name) {
+        return categoryRepository.findAllLikeName(name);
+    }
+
+    @Override
     public Category getById(UUID id) {
         return categoryRepository.findById(id)
                 .orElse(null);
