@@ -24,12 +24,17 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public List<Post> getAll() {
-        return postRepository.findAll();
+        return postRepository.findAllByOrderByCreatedDateDesc();
     }
 
     @Override
     public List<Post> getAllByCategoryId(UUID categoryId) {
         return postRepository.findAllByCategoryId(categoryId);
+    }
+
+    @Override
+    public List<Post> getAllLikeTitleOrContent(String value) {
+        return postRepository.findAllLikeTitleOrContentAndOrderByCreatedDateDesc(value);
     }
 
     @Override

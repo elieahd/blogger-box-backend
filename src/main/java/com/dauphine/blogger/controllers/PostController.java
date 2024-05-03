@@ -1,6 +1,7 @@
 package com.dauphine.blogger.controllers;
 
 import com.dauphine.blogger.dto.PostRequest;
+import com.dauphine.blogger.models.Category;
 import com.dauphine.blogger.models.Post;
 import com.dauphine.blogger.services.PostService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -34,10 +36,12 @@ public class PostController {
     @GetMapping
     @Operation(
             summary = "Get all posts",
-            description = "Retrieve all posts ordered by creation date desc"
+            description = "Retrieve all posts ordered by creation date desc and ability to filter by title or content"
     )
-    public List<Post> getAllPosts() {
-        List<Post> posts = postService.getAll();
+    public List<Post> getAllPosts(@RequestParam String value) {
+        List<Post> posts = value == null || value.isBlank()
+                ? postService.getAll()
+                : postService.getAllLikeTitleOrContent(value);
         return posts;
     }
 
