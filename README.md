@@ -1,5 +1,24 @@
+# Architecture
+<p align="center">
+  <img src="docs/images/architecture.png">
+</p>
+
+# Database diagram
+<p align="center">
+  <img src="docs/images/database.png">
+</p>
+
 # Documentation 
 Via swagger : [localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html#/)
+
+# Database credentials
+| Property | Value                              |
+|----------|------------------------------------|
+| Hostname | `manny.db.elephantsql.com`         |
+| Name     | `eymotfhi`                         |
+| Port     | `5432`                             |
+| Username | `eymotfhi`                         |
+| Password | `dqJhIIFxZs3elscoVytE1t2LOOT-qZm3` |
 
 # Course material
 | Session | Date       | Instructor                                        | Description                                                                                                                              |
