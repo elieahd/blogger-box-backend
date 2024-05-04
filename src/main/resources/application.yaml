@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: blogger-box-backend
+  datasource:
+    url: jdbc:postgresql://manny.db.elephantsql.com:5432/eymotfhi
+    username: eymotfhi
+    password: dqJhIIFxZs3elscoVytE1t2LOOT-qZm3
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
