@@ -1,5 +1,6 @@
 package com.dauphine.blogger.services;
 
+import com.dauphine.blogger.exceptions.CategoryNotFoundByIdException;
 import com.dauphine.blogger.models.Category;
 
 import java.util.List;
@@ -11,11 +12,11 @@ public interface CategoryService {
 
     List<Category> getAllLikeName(String name);
 
-    Category getById(UUID id);
+    Category getById(UUID id) throws CategoryNotFoundByIdException;
 
     Category create(String name);
 
-    Category update(UUID id, String name);
+    Category update(UUID id, String name) throws CategoryNotFoundByIdException;
 
-    void deleteById(UUID id);
+    void deleteById(UUID id) throws CategoryNotFoundByIdException;
 }
