@@ -42,7 +42,7 @@ public class CategoryController {
             summary = "Get all categories",
             description = "Retrieve all categories or filter like name"
     )
-    public List<Category> getAll(@RequestParam String name) {
+    public List<Category> getAll(@RequestParam(required = false) String name) {
         List<Category> categories = name == null || name.isBlank()
                 ? categoryService.getAll()
                 : categoryService.getAllLikeName(name);

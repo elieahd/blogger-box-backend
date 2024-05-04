@@ -38,7 +38,7 @@ public class PostController {
             summary = "Get all posts",
             description = "Retrieve all posts ordered by creation date desc and ability to filter by title or content"
     )
-    public List<Post> getAllPosts(@RequestParam String value) {
+    public List<Post> getAllPosts(@RequestParam(required = false) String value) {
         List<Post> posts = value == null || value.isBlank()
                 ? postService.getAll()
                 : postService.getAllLikeTitleOrContent(value);
