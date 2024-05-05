@@ -17,4 +17,6 @@ public interface CategoryRepository extends JpaRepository<Category, UUID> {
     """)
     List<Category> findAllLikeName(@Param("name") String name);
 
+    boolean existsByName(String name);
+
 }

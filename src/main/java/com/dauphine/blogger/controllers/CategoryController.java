@@ -1,6 +1,7 @@
 package com.dauphine.blogger.controllers;
 
 import com.dauphine.blogger.dto.CategoryRequest;
+import com.dauphine.blogger.exceptions.CategoryNameAlreadyExistsException;
 import com.dauphine.blogger.exceptions.CategoryNotFoundByIdException;
 import com.dauphine.blogger.models.Category;
 import com.dauphine.blogger.models.Post;
@@ -67,7 +68,7 @@ public class CategoryController {
             summary = "Create new category",
             description = "Create new category, only required field is the name of the category to create"
     )
-    public ResponseEntity<Category> create(@RequestBody CategoryRequest categoryRequest) {
+    public ResponseEntity<Category> create(@RequestBody CategoryRequest categoryRequest) throws CategoryNameAlreadyExistsException {
         Category category = categoryService.create(categoryRequest.getName());
         return ResponseEntity
                 .created(URI.create("v1/categories/" + category.getId()))
@@ -80,7 +81,7 @@ public class CategoryController {
             description = "Update the name of an existing category"
     )
     public ResponseEntity<Category> update(@PathVariable UUID id,
-                                           @RequestBody CategoryRequest categoryRequest) throws CategoryNotFoundByIdException {
+                                           @RequestBody CategoryRequest categoryRequest) throws CategoryNotFoundByIdException, CategoryNameAlreadyExistsException {
         Category category = categoryService.update(id, categoryRequest.getName());
         return ResponseEntity.ok(category);
     }

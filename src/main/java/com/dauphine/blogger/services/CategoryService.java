@@ -1,5 +1,6 @@
 package com.dauphine.blogger.services;
 
+import com.dauphine.blogger.exceptions.CategoryNameAlreadyExistsException;
 import com.dauphine.blogger.exceptions.CategoryNotFoundByIdException;
 import com.dauphine.blogger.models.Category;
 
@@ -14,9 +15,9 @@ public interface CategoryService {
 
     Category getById(UUID id) throws CategoryNotFoundByIdException;
 
-    Category create(String name);
+    Category create(String name) throws CategoryNameAlreadyExistsException;
 
-    Category update(UUID id, String name) throws CategoryNotFoundByIdException;
+    Category update(UUID id, String name) throws CategoryNotFoundByIdException, CategoryNameAlreadyExistsException;
 
     void deleteById(UUID id) throws CategoryNotFoundByIdException;
 }

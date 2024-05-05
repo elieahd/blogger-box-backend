@@ -1,5 +1,6 @@
 package com.dauphine.blogger.controllers.handlers;
 
+import com.dauphine.blogger.exceptions.CategoryNameAlreadyExistsException;
 import com.dauphine.blogger.exceptions.CategoryNotFoundByIdException;
 import com.dauphine.blogger.exceptions.PostNotFoundByIdException;
 import org.slf4j.Logger;
@@ -21,6 +22,16 @@ public class GlobalDefaultExceptionHandler {
         logger.warn("[NOT FOUND] {}", ex.getMessage());
         return ResponseEntity
                 .status(404)
+                .body(ex.getMessage());
+    }
+
+    @ExceptionHandler({
+        CategoryNameAlreadyExistsException.class
+    })
+    public ResponseEntity<String> handleBadRequestException(Exception ex) {
+        logger.warn("[BAD REQUEST] {}", ex.getMessage());
+        return ResponseEntity
+                .status(400)
                 .body(ex.getMessage());
     }
 

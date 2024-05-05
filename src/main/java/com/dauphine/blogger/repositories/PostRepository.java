@@ -15,8 +15,8 @@ public interface PostRepository extends JpaRepository<Post, UUID> {
     @Query("""
         SELECT post
         FROM Post post
-        WHERE UPPER(post.title) LIKE UPPER(CONCAT('%', :value ,'%'))
-        OR UPPER(post.content) LIKE UPPER(CONCAT('%', :value ,'%'))
+        WHERE UPPER(post.title) LIKE UPPER(CONCAT('%', :value, '%'))
+        OR UPPER(post.content) LIKE UPPER(CONCAT('%', :value, '%'))
         ORDER BY post.createdDate DESC
     """)
     List<Post> findAllLikeTitleOrContentAndOrderByCreatedDateDesc(@Param("value") String value);
