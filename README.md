@@ -34,3 +34,7 @@ Via swagger : [localhost:8080/swagger-ui/index.html](http://localhost:8080/swagg
 | `#09`   | 17/06/2024 | [elieahd](https://github.com/elieahd)             | `tbd`                                                                                                                                    |
 | `#10`   | 20/06/2024 | [bilal-elchami](https://github.com/bilal-elchami) | `tbd`                                                                                                                                    |
 
+# Pipelines
+| Event     | Description                                     | Workflow                                                   |
+|-----------|-------------------------------------------------|------------------------------------------------------------|
+| on `push` | checkout code, build project and run unit tests | [`.github/workflows/test.yml`](.github/workflows/build-test.yml) |
