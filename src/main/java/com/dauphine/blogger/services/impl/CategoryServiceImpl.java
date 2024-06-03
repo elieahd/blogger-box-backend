@@ -8,6 +8,7 @@ import com.dauphine.blogger.services.CategoryService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -31,8 +32,12 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public Category getById(UUID id) throws CategoryNotFoundByIdException {
-        return categoryRepository.findById(id)
-                .orElseThrow(() -> new CategoryNotFoundByIdException(id));
+        Optional<Category> category = categoryRepository.findById(id);
+        if (category.isPresent()) {
+            return category.get();
+        } else {
+            throw new CategoryNotFoundByIdException(id);
+        }
     }
 
     @Override
