@@ -1,11 +1,11 @@
 # Architecture
 <p align="center">
-  <img src="docs/images/architecture.png">
+  <img src="docs/images/architecture.png" alt="architecture">
 </p>
 
 # Database diagram
 <p align="center">
-  <img src="docs/images/database.png">
+  <img src="docs/images/database.png" alt="database">
 </p>
 
 # Documentation 
@@ -33,8 +33,8 @@ Web Programming course about constructing web application as part of Master's de
 | `#04`   | 25/04/2024 | [elieahd](https://github.com/elieahd)             | [Implementing RESTful API with JPA](https://drive.google.com/file/d/1EKiskNB5uvD7SV2sKR-QN_Ae-QTBiJ1A/view?usp=drive_link)               |
 | `#05`   | 13/05/2024 | [bilal-elchami](https://github.com/bilal-elchami) | [Hands on frontend (Part 1)](https://drive.google.com/file/d/1tMLBh7upGqAAG2b75dj0EAloimAoYrt7/view?usp=drive_link)                      |
 | `#06`   | 16/05/2024 | [bilal-elchami](https://github.com/bilal-elchami) | [Hands on frontend (Part 2)](https://drive.google.com/file/d/1XAzKjVyCffgJXh31g6Hri2OsL-UHBtH_/view?usp=drive_link)                      |
-| `#07`   | 03/06/2024 | [elieahd](https://github.com/elieahd)             | [Response and exception handling](https://drive.google.com/file/d/1dCUjRT1v-t7SEmIllgHiZ-1sgQ4czCbo/view?usp=drive_link)                                                                                                                                     |
-| `#08`   | 06/06/2024 | [bilal-elchami](https://github.com/bilal-elchami) | `todo`                                                                                                                                   |
+| `#07`   | 03/06/2024 | [elieahd](https://github.com/elieahd)             | [Response and exception handling](https://drive.google.com/file/d/1dCUjRT1v-t7SEmIllgHiZ-1sgQ4czCbo/view?usp=drive_link)                 |
+| `#08`   | 06/06/2024 | [bilal-elchami](https://github.com/bilal-elchami) | [Beyond Frontend]()                                                                                                                      |
 | `#09`   | 17/06/2024 | [elieahd](https://github.com/elieahd)             | Dedicated session for final project (focus on `backend`)                                                                                 |
 | `#10`   | 20/06/2024 | [bilal-elchami](https://github.com/bilal-elchami) | Dedicated session for final project (focus on `frontend`)                                                                                |
 

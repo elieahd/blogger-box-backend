@@ -47,7 +47,7 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public Category update(UUID id, String name) throws CategoryNotFoundByIdException, CategoryNameAlreadyExistsException {
         Category category = getById(id);
-        if (!category.getName().equals(name) && categoryRepository.existsByName(name)) {
+        if (!category.hasName(name) && categoryRepository.existsByName(name)) {
             throw new CategoryNameAlreadyExistsException(name);
         }
         category.setName(name);

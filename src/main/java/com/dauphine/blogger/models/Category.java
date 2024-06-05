@@ -41,4 +41,9 @@ public class Category {
     public void setName(String name) {
         this.name = name;
     }
+
+    public boolean hasName(String name) {
+        return this.name.equals(name);
+    }
+
 }
