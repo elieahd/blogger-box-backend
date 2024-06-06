@@ -34,7 +34,7 @@ Web Programming course about constructing web application as part of Master's de
 | `#05`   | 13/05/2024 | [bilal-elchami](https://github.com/bilal-elchami) | [Hands on frontend (Part 1)](https://drive.google.com/file/d/1tMLBh7upGqAAG2b75dj0EAloimAoYrt7/view?usp=drive_link)                      |
 | `#06`   | 16/05/2024 | [bilal-elchami](https://github.com/bilal-elchami) | [Hands on frontend (Part 2)](https://drive.google.com/file/d/1XAzKjVyCffgJXh31g6Hri2OsL-UHBtH_/view?usp=drive_link)                      |
 | `#07`   | 03/06/2024 | [elieahd](https://github.com/elieahd)             | [Response and exception handling](https://drive.google.com/file/d/1dCUjRT1v-t7SEmIllgHiZ-1sgQ4czCbo/view?usp=drive_link)                 |
-| `#08`   | 06/06/2024 | [bilal-elchami](https://github.com/bilal-elchami) | [Beyond Frontend]()                                                                                                                      |
+| `#08`   | 06/06/2024 | [bilal-elchami](https://github.com/bilal-elchami) | [Beyond Frontend](https://drive.google.com/file/d/1fpZtw4BfP6jVqkjoaTR1FnDAYS8j0P2S/view?usp=drive_link)                                                                                                                      |
 | `#09`   | 17/06/2024 | [elieahd](https://github.com/elieahd)             | Dedicated session for final project (focus on `backend`)                                                                                 |
 | `#10`   | 20/06/2024 | [bilal-elchami](https://github.com/bilal-elchami) | Dedicated session for final project (focus on `frontend`)                                                                                |
 
