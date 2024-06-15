@@ -252,7 +252,7 @@ class PostControllerTest {
             actions.andExpect(jsonPath("$[" + i + "].id").value(post.getId().toString()))
                     .andExpect(jsonPath("$[" + i + "].title").value(post.getTitle()))
                     .andExpect(jsonPath("$[" + i +"].content").value(post.getContent()))
-                    .andExpect(jsonPath("$[" + i + "].createdDate").value(post.getCreatedDate().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"))))
+                    .andExpect(jsonPath("$[" + i + "].createdDate").value(post.getCreatedDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"))))
                     .andExpect(jsonPath("$[" + i + "].category.id").value(post.getCategory().getId().toString()))
                     .andExpect(jsonPath("$[" + i + "].category.name").value(post.getCategory().getName()));
         }
@@ -263,7 +263,7 @@ class PostControllerTest {
                 .andExpect(jsonPath("$.id").value(post.getId().toString()))
                 .andExpect(jsonPath("$.title").value(post.getTitle()))
                 .andExpect(jsonPath("$.content").value(post.getContent()))
-                .andExpect(jsonPath("$.createdDate").value(post.getCreatedDate().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"))))
+                .andExpect(jsonPath("$.createdDate").value(post.getCreatedDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"))))
                 .andExpect(jsonPath("$.category.id").value(post.getCategory().getId().toString()))
                 .andExpect(jsonPath("$.category.name").value(post.getCategory().getName()));
     }
