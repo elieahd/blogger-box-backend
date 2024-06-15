@@ -30,7 +30,7 @@ public class Post {
     private Category category;
 
     @Column(name = "created_date")
-    @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
     private LocalDateTime createdDate;
 
     public Post() {
