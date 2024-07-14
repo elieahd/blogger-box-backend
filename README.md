@@ -14,14 +14,6 @@ Via swagger : [localhost:8080/swagger-ui/index.html](http://localhost:8080/swagg
 # Database credentials
 Create your own database, either locally or remotely (via [ElephantSQL](https://www.elephantsql.com/), [Supabase](https://supabase.com/), [Heroku](https://www.heroku.com/), [Neon](https://neon.tech/)...)
 
-| Property | Value                              |
-|----------|------------------------------------|
-| Hostname | `manny.db.elephantsql.com`         |
-| Name     | `eymotfhi`                         |
-| Port     | `5432`                             |
-| Username | `eymotfhi`                         |
-| Password | `dqJhIIFxZs3elscoVytE1t2LOOT-qZm3` |
-
 # Course material
 Web Programming course about constructing web application as part of Master's degree in business informatics (MIAGE) @ Paris Dauphine University (PSL)
 
@@ -41,4 +33,4 @@ Web Programming course about constructing web application as part of Master's de
 # Pipelines
 | Event     | Description                                     | Workflow                                                         |
 |-----------|-------------------------------------------------|------------------------------------------------------------------|
-| on `push` | checkout code, build project and run unit tests | [`.github/workflows/test.yml`](.github/workflows/build-test.yml) |
+| on `push` | checkout code, build project and run unit tests | [`.github/workflows/test.yml`](.github/workflows/pr-checks.yml) |

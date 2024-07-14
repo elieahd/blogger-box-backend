@@ -2,9 +2,9 @@ spring:
   application:
     name: blogger-box-backend
   datasource:
-    url: jdbc:postgresql://manny.db.elephantsql.com:5432/eymotfhi
-    username: eymotfhi
-    password: dqJhIIFxZs3elscoVytE1t2LOOT-qZm3
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     database: postgresql

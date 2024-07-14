@@ -19,7 +19,7 @@ public class GlobalDefaultExceptionHandler {
             PostNotFoundByIdException.class
     })
     public ResponseEntity<String> handleNotFoundException(Exception ex) {
-        logger.warn("[NOT FOUND] {}", ex.getMessage());
+        logger.warn("[Functional/404] {}", ex.getMessage());
         return ResponseEntity
                 .status(404)
                 .body(ex.getMessage());
@@ -29,7 +29,7 @@ public class GlobalDefaultExceptionHandler {
         CategoryNameAlreadyExistsException.class
     })
     public ResponseEntity<String> handleBadRequestException(Exception ex) {
-        logger.warn("[BAD REQUEST] {}", ex.getMessage());
+        logger.warn("[Functional/400] {}", ex.getMessage());
         return ResponseEntity
                 .status(400)
                 .body(ex.getMessage());

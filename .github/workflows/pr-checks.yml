@@ -1,0 +1,33 @@
+name: ✅ PR checks
+
+on: pull_request
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: ⤵️ Checkout code
+      uses: actions/checkout@v4
+
+    - name: ⚙️ Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+        cache: maven
+
+    - name: 🧪 Run unit tests
+      run: mvn test
+
+    - name: 🔍 Sonar code analysis
+      run: sonarsource/sonarcloud-github-action@2.3.0
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+    - name: 🔆 Quality Gate
+      uses: sonarsource/sonarqube-quality-gate-action@1.1.0
+      timeout-minutes: 2
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
