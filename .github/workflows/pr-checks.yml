@@ -22,7 +22,7 @@ jobs:
       run: mvn test
 
     - name: 🔍 Sonar code analysis
-      run: sonarsource/sonarcloud-github-action@2.3.0
+      run: sonarsource/sonarcloud-github-action@master
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
