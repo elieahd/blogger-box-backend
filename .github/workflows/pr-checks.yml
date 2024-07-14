@@ -27,7 +27,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
     - name: 🔆 Quality Gate
-      uses: sonarsource/sonarqube-quality-gate-action@1.1.0
+      uses: sonarsource/sonarqube-quality-gate-action@master
       timeout-minutes: 2
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
